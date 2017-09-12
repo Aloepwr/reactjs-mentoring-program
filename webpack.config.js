@@ -4,24 +4,20 @@ module.exports = {
 	context: path.join(__dirname, 'src'),
 	entry: "./index.js",
 	output: {
-		path: path.join(__dirname, 'built'),
+		path: path.join(__dirname, 'dist'),
 		filename: "./bundle.js"
 	},
 	module: {
 		rules: [{
 			test: /\.jsx$/,
 			exclude: /node_modules/,
-			use: {
-				loader: 'babel-loader',
-				options: {
-                	plugins: ["transform-react-jsx"],
-                	presets: ["env", "react"]
-            	}
-			}
+			use: { loader: 'babel-loader' }
 		}]
 	},
 	resolve: {
 		extensions: ['.js', '.jsx']
 	},
-	watch: true
+	devServer: {
+	  hot: true
+	}
 }
