@@ -1,11 +1,13 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
 	context: path.join(__dirname, 'src'),
 	entry: "./index.js",
 	output: {
 		path: path.join(__dirname, 'dist'),
-		filename: "./bundle.js"
+		filename: "./bundle.js",
+		publicPath: "dist/"
 	},
 	module: {
 		rules: [{
@@ -18,6 +20,10 @@ module.exports = {
 		extensions: ['.js', '.jsx']
 	},
 	devServer: {
-	  hot: true
-	}
+	  hot: true,
+	  watchContentBase: true
+	},
+	plugins: [
+		new webpack.HotModuleReplacementPlugin()
+	]
 }

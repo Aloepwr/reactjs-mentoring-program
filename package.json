@@ -4,7 +4,7 @@
   "description": "netflix-like web application",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --color",
+    "start": "webpack-dev-server --colors", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
