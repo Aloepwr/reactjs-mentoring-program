@@ -19,11 +19,7 @@ module.exports = {
 	resolve: {
 		extensions: ['.js', '.jsx']
 	},
-	devServer: {
-	  hot: true,
-	  watchContentBase: true
-	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin()
 	]
-}
+};
