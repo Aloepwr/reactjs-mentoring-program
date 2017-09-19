@@ -1,0 +1,279 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+//
+// common classes
+//
+
+.span-title {
+  font-family: Arial;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: red;  
+}
+
+
+
+//
+// styles
+//
+
+body {
+  background-color: #f0f0f0;
+  color: #fff;
+}
+
+header {
+  background-color: #453F3D;
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/dc18d1c3-9e06-41a4-a5b0-409388e3f9e8/a945a4e1-770c-4a3a-b5a1-18b78cee0f1f/BY-en-20170911-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+}
+
+//
+// header box
+//
+
+.header {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 60px;
+  margin: 0 auto;
+  max-width: 980px;
+
+  .search-field {
+    margin-bottom: 15px;
+
+    h2 {
+      margin: 30px 0 10px 0;
+      
+      font-family: Arial;
+      font-size: 1.5em;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+    
+    input {
+      padding: 10px 20px;
+      width: 100%;
+
+      background-color: black;
+      color: #fff;
+      border-bottom: 1px red solid;
+
+      font-family: Arial;
+    }
+  }
+
+  .search-sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      width: 260px;
+      
+      font-size: 0.75em;
+      font-family: Arial;
+      text-transform: uppercase;
+
+      li a {
+        padding: 5px 15px;
+        border-radius: 2px;
+
+        font-size: 1.10em;
+        font-family: Arial;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        background-color: #453F3D;
+        color: #fff;
+
+        &:hover, &:active, &:focus {
+          background-color: red;
+        }
+      }
+    }
+
+    button {
+      width: 180px;
+      height: 30px;
+
+      border: 0;
+      border-radius: 2px;
+      background-color: red;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 0.9em;
+
+      cursor: pointer;
+    }
+  }
+}
+
+//
+// filter tab
+//
+
+.search-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  max-width: 980px;
+  padding: 5px 60px;
+  margin: 0 auto;
+  
+  font-family: Arial;
+  background-color: #DBD8D7;
+  color: black;
+
+  ul {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    
+    li:first-child {
+      padding-right: 15px;
+    }
+
+    li a {
+      padding: 0 20px;
+      text-decoration: none;
+      color: black;
+
+      &:hover, &:active, &:focus {
+        color: red;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+//
+// main container
+//
+
+.movie-card_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.movie-card {
+  margin: 40px 0 30px;
+
+  &:last-child {
+    padding-bottom: 50px;
+  }
+}
+
+.movie-card_layout {
+  padding: 0 15px;
+}
+
+.movie-card_image {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.movie-card_description {
+  display: flex;
+  justify-content: space-between;
+  
+  width: 183px;
+  padding: 12px 0;
+  
+  font-family: Arial;
+  color: black;
+}
+
+.movie-card_description_title {
+  h4 {
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #453F3D;
+  }
+}
+
+.movie-card_description_year {
+  div {
+    border: 1px black solid;
+    border-radius: 2px;
+    padding: 3px 7px;
+    font-size: 10px;
+  }
+}
+
+//
+// footer
+//
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 50px;
+  background-color: #453F3D;
+}
