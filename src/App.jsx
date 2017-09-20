@@ -1,7 +1,8 @@
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import { HeaderFilter } from "./components/HeaderFilter"
-import { MovieCard } from "./components/MovieCard"
+import { HeaderFilter } from "./components/HeaderFilter";
+import { MovieCard } from "./components/MovieCard";
+import { MovieDescription } from "./components/MovieDescription";
 
 
 export const App = () => (
@@ -9,6 +10,7 @@ export const App = () => (
     <Header />
     <HeaderFilter />
     <MovieCard />
+    <MovieDescription />
     <Footer />
   </div>
 )

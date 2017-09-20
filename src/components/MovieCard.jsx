@@ -11,16 +11,16 @@ let moviesList = [movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieIn
 function movieItem(props) {
   return (
     <li className="movie-card">
-      <div className="movie-card_layout">
-        <div className="movie-card_image">
-          <img src={props.img}/>
+      <div className="movie-card__layout">
+        <div className="movie-card__image">
+          <img src={props.img} />
         </div>
-        <div className="movie-card_description">
-          <div className="movie-card_description_title">
+        <div className="movie-card__description">
+          <div className="movie-card__description--title">
             <h4>{props.title}</h4>
             <p>{props.genre}</p>
           </div>
-          <div className="movie-card_description_year">
+          <div className="movie-card__description--year">
             <div>{props.year}</div>
           </div>            
         </div>
@@ -29,8 +29,14 @@ function movieItem(props) {
   )
 }
 
-export const MovieCard = () => (
-  <ul className="movie-card_list">
-    {moviesList.map(movieItem)}
-  </ul>
-);
+export const MovieCard = () => {
+  if (moviesList.length < 1) { 
+    return ( <h1 className="no-content">No films found</h1> );
+  } else {
+    return (
+      <ul className="movie-card__list">
+        {moviesList.map(movieItem)}
+      </ul>
+    );
+  }
+};
