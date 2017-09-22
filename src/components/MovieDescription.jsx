@@ -1,5 +1,3 @@
-import React from 'react';
-
 // let movieInfo = {
 //   "unit": 87,
 //   "show_id": 60031236,
@@ -16,7 +14,7 @@ import React from 'react';
 // }
 
 
-export class MovieDescription extends React.Component {
+class MovieDescription extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -63,3 +61,5 @@ export class MovieDescription extends React.Component {
     )
   }
 };
+
+export default MovieDescription;

@@ -1,14 +1,14 @@
-import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
 
 import { App } from './App';
 
-window.React = React;
 
 render(
-  <App />,
+  (
+    <Router>
+      <App />
+    </Router>
+  ),   
   document.getElementById('react-container')
 );
-
-
-console.log('Hello World!');

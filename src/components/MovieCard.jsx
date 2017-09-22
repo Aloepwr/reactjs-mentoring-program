@@ -2,11 +2,10 @@ let movieInfo = {
   img: "http://netflixroulette.net/api/posters/60031236.jpg",
   title: "Kill Bill: Vol. 1",
   genre: "Action & Adventure",
-  year: "2003",
-  key: Math.random()
+  year: "2003"
 };
 
-let moviesList = [movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo];
+let moviesList = []; // movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo
 
 function movieItem(props) {
   return (
@@ -29,7 +28,7 @@ function movieItem(props) {
   )
 }
 
-export const MovieCard = () => {
+const MovieCard = () => {
   if (moviesList.length < 1) { 
     return ( <h1 className="no-content">No films found</h1> );
   } else {
@@ -40,3 +39,5 @@ export const MovieCard = () => {
     );
   }
 };
+
+export default MovieCard;

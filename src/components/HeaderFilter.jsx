@@ -1,4 +1,4 @@
-export const HeaderFilter = ({amount=9}) => (
+const HeaderFilter = ({amount=9}) => (
   <div className="search-filter">
     <div className="search-filter__movies-amount">
       <div>{amount} movies found</div>
@@ -12,3 +12,5 @@ export const HeaderFilter = ({amount=9}) => (
     </div>
   </div>
 );
+
+export default HeaderFilter;

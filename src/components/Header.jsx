@@ -1,4 +1,7 @@
-export const Header = () => (
+import {Link} from 'react-router-dom';
+
+
+const Header = () => (
   <header>
     <div className="header">
       <span className="span-title">netflixroulette</span>
@@ -17,3 +20,5 @@ export const Header = () => (
     </div>
   </header>
 );
+
+export default Header;
