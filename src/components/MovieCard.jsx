@@ -5,11 +5,11 @@ let movieInfo = {
   year: "2003"
 };
 
-let moviesList = []; // movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo, movieInfo
+let moviesList = [movieInfo];
 
-function movieItem(props) {
+function movieItem(props, index) {
   return (
-    <li className="movie-card">
+    <li className="movie-card" key={index}>
       <div className="movie-card__layout">
         <div className="movie-card__image">
           <img src={props.img} />
@@ -28,15 +28,17 @@ function movieItem(props) {
   )
 }
 
-const MovieCard = () => {
-  if (moviesList.length < 1) { 
-    return ( <h1 className="no-content">No films found</h1> );
+const MovieCard = (props) => {
+  if (props.match.params.searchQuery) {
+    if (moviesList.length >= 1) { 
+      return (
+        <ul className="movie-card__list" onClick={ () => props.history.push(`/film/${encodeURI(props.match.params.searchQuery)}`) }>
+          {moviesList.map(movieItem)}
+        </ul>
+      );
+    }
   } else {
-    return (
-      <ul className="movie-card__list">
-        {moviesList.map(movieItem)}
-      </ul>
-    );
+    return ( <h1 className="no-content">No films found</h1> );
   }
 };
 
