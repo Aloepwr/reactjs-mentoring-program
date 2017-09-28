@@ -1,3 +1,6 @@
+import '../stylesheets/MovieDescription';
+
+
 let movieInfo = {
   "unit": 87,
   "show_id": 60031236,

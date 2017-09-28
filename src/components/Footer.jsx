@@ -1,8 +1,8 @@
-import React from 'react';
+import '../stylesheets/Footer';
 
 
 const Footer = () => (
-  <footer>
+  <footer className="app-footer">
     <span className="span-title">netflixroulette</span>
   </footer>
 );

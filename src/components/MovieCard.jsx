@@ -1,3 +1,6 @@
+import '../stylesheets/MovieCard';
+
+
 let movieInfo = {
   img: "http://netflixroulette.net/api/posters/60031236.jpg",
   title: "Kill Bill: Vol. 1",

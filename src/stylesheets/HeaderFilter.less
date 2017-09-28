@@ -1,0 +1,41 @@
+//
+// filter tab
+//
+
+.search-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  max-width: 980px;
+  padding: 5px 60px;
+  margin: 0 auto;
+  
+  font-family: Arial;
+  background-color: #DBD8D7;
+  color: black;
+
+  ul {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    
+    li:first-child {
+      padding-right: 15px;
+    }
+
+    li a {
+      padding: 0 20px;
+      text-decoration: none;
+      color: black;
+
+      &:hover, &:active, &:focus {
+        color: red;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

@@ -1,3 +1,5 @@
+import '../stylesheets/HeaderFilter';
+
 const HeaderFilter = ({amount=9}) => (
   <div className="search-filter">
     <div className="search-filter__movies-amount">

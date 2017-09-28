@@ -1,0 +1,63 @@
+//
+// main container / movie card
+//
+
+.movie-card__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.movie-card {
+  margin: 40px 0 30px;
+
+  &:last-child {
+    padding-bottom: 50px;
+  }
+}
+
+.movie-card__layout {
+  padding: 0 15px;
+}
+
+.movie-card__image {
+  img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+}
+
+.movie-card__description {
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 12px 0;
+  
+  font-family: Arial;
+  color: black;
+}
+
+.movie-card__description--title {
+  h4 {
+    font-size: 18px;
+    padding-bottom: 7px;
+  }
+
+  p {
+    font-size: 14px;
+    color: #453F3D;
+  }
+}
+
+.movie-card__description--year {
+  div {
+    border: 1px black solid;
+    border-radius: 2px;
+    padding: 3px 7px;
+    font-size: 10px;
+  }
+}

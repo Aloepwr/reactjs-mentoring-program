@@ -6,8 +6,7 @@ module.exports = {
 	context: path.join(__dirname, 'src'),
 	
 	entry: {
-		bundle: ["./index"],
-		styles: "./styles"
+		bundle: ["./index"]
 	},
 	
 	output: {
