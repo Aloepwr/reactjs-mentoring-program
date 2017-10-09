@@ -1,4 +1,4 @@
-import '../stylesheets/MovieDescription';
+import "../stylesheets/MovieDescription";
 
 
 let movieInfo = {
@@ -34,7 +34,7 @@ const MovieDescription = (props) => (
           <h2>{movieInfo.show_title}</h2>
           <p>{movieInfo.rating}</p>
         </div>
-        <p>Oscar-winning Movies</p>
+        <p>{movieInfo.category}</p>
         <div className="movie-description__info">
           <p>{movieInfo.release_year}</p>
           <p>{movieInfo.runtime}</p>

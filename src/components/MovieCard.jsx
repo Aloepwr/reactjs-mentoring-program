@@ -1,4 +1,4 @@
-import '../stylesheets/MovieCard';
+import "../stylesheets/MovieCard";
 
 
 let movieInfo = {
@@ -28,7 +28,7 @@ function movieItem(props, index) {
         </div>
       </div>
     </li>
-  )
+  );
 }
 
 const MovieCard = (props) => {

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -29,6 +29,6 @@ class App extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default App;

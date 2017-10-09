@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
+import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 
-import '../stylesheets/Header';
+import "../stylesheets/Header";
 
 
 let searchQuery = "";
