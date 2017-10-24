@@ -3,9 +3,9 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   devtool: 'source-map',
-	devServer: {
-  	hot: true,
-  	watchContentBase: true,
+  devServer: {
+    hot: true,
+    watchContentBase: true,
     historyApiFallback: true
-	}
+  }
 });

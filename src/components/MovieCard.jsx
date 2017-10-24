@@ -2,7 +2,7 @@ import "../stylesheets/MovieCard";
 
 
 let movieInfo = {
-  img: "http://netflixroulette.net/api/posters/60031236.jpg",
+  img: "",
   title: "Kill Bill: Vol. 1",
   genre: "Action & Adventure",
   year: "2003"
@@ -15,7 +15,7 @@ function movieItem(props, index) {
     <li className="movie-card" key={index}>
       <div className="movie-card__layout">
         <div className="movie-card__image">
-          <img src={props.img} />
+          {/* <img src={props.img} /> */}
         </div>
         <div className="movie-card__description">
           <div className="movie-card__description--title">
