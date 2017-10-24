@@ -1,5 +1,5 @@
-import "../stylesheets/MovieCard";
 import { Link } from 'react-router-dom';
+import "../stylesheets/MovieCard";
 
 export function MovieCard(props) {
   const { poster, title, release_date, id, type } = props;

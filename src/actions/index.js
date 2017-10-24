@@ -1,6 +1,6 @@
-let apiKey = "414429c75ff5374bde03ed7340c64dd4";
-
 // Constants
+export const apiKey = "414429c75ff5374bde03ed7340c64dd4";
+
 export const RECEIVE_MOVIES = 'RECEIVE_MOVIES';
 export const RECEIVE_CURRENT_MOVIE = 'RECEIVE_CURRENT_MOVIE';
 export const RECEIVE_RELATED_MOVIES = 'RECEIVE_RELATED_MOVIES';

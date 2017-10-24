@@ -1,11 +1,8 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import HeaderFilter from "./components/HeaderFilter";
-import MovieCard from "./components/MovieCard";
-import MovieDescription from "./components/MovieDescription";
+import MoviesListResultContainer from './containers/MoviesListResultContainer';
+import FullMovieDescriptionContainer from './containers/FullMovieDescriptionContainer';
 
 
 class App extends React.Component {
@@ -16,19 +13,32 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <Header />
+        <Switch>
+          <Route exact path="/" component={ MoviesListResultContainer } />
+          <Route exact path="/search" component={ MoviesListResultContainer } />
+          <Route path="/search/:searchQuery" component={ MoviesListResultContainer } />
+          <Route path="/:type/:filmId" component={ FullMovieDescriptionContainer } />
+        </Switch>
+      </div>
+
+);
+}
+}
+
+export default App;
+
+// import Header from "./components/Header";
+// import Footer from "./components/Footer";
+// import MovieCard from "./components/MovieCard";
+// import MovieCardDescription from "./components/MovieCardDescription";
+
+{/*     <Header />
         <HeaderFilter />
         
         <Switch>
           <Route exact path="/" component={MovieCard} />
           <Route path="/search/:searchQuery" component={MovieCard} />
-          <Route path="/film/:searchQuery" component={MovieDescription} />
+          <Route path="/film/:searchQuery" component={MovieCardDescription} />
         </Switch>
         
-        <Footer />
-      </div>
-    );
-  }
-}
-
-export default App;
+        <Footer /> */}

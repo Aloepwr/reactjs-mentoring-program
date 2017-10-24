@@ -13,10 +13,6 @@ const store = createStore(
   applyMiddleware(thunk)
 );
 
-store.subscribe( () => {
-  console.log("Store is:", store.getState());
-});
-
 render(
   (
     <Provider store={store}>

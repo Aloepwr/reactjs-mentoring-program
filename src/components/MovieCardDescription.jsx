@@ -1,17 +1,17 @@
-import "../stylesheets/MovieDescription";
+import { Link } from 'react-router-dom';
+import "../stylesheets/MovieCardDescription";
 
 
-const MovieDescription = (props) => {
+const MovieCardDescription = (props) => {
   const { poster, title, vote_average, release_date, runtime, overview, budget, seasons, last_air_date } = props.currentMovie;
+  
   const rating = <p>{ vote_average }</p>;
 
   return (
     <div className="movie-description">
       <div className="movie-description__head">
         <span className="span-title">netflixroulette</span>
-        <button className="btn__back" onClick={ () => props.history.goBack() }>
-          Search
-        </button>
+        <Link to="/search" className="btn__back">Search</Link>
       </div>
       
       <div className="movie-description__layout">
@@ -39,7 +39,7 @@ const MovieDescription = (props) => {
   );
 };
 
-export default MovieDescription;
+export default MovieCardDescription;
 
 
 
