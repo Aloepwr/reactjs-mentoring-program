@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     loadMovieInfo: (id, type) => {
-      if(type === "movie") {
+      if (type == "movie") {
         dispatch(fetchMovieInfo(id, type));
       } else {
         dispatch(fetchTVShowInfo(id, type));

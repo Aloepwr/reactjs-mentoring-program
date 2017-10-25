@@ -49,14 +49,14 @@ function isDirector(person) {
 
 // Fetches
 
-export function fetchMovies(searchQuery) {
+export function fetchMovies(query) {
   return function (dispatch, getState) {
     let state = getState();
 
     let urlType = "";
     let urlParams = new URLSearchParams();
 
-    urlParams.append("searchQuery", searchQuery);
+    urlParams.append("query", decodeURIComponent(query));
 
     if(state.searchBy === SearchBy.SEARCH_BY_MOVIES) {
       urlType = "movie"
@@ -64,7 +64,7 @@ export function fetchMovies(searchQuery) {
       urlType = "tv"
     }
 
-    return fetch(`https://api.themoviedb.org/3/search/${urlType}?api_key=${apiKey}&${urlParams.toString().toLowerCase()}`)
+    return fetch(`https://api.themoviedb.org/3/search/${urlType}?api_key=${apiKey}&${urlParams}`)
       .then(isResponseOk)
       .then(fetchedMovies => {
         let converter = state.searchBy === SearchBy.SEARCH_BY_MOVIES ? convertToMovie : convertToTVShow;

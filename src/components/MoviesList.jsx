@@ -9,7 +9,7 @@ function getYear(dateString) {
   }
 }
 
-export function MoviesList(props) {
+function MoviesList(props) {
   const movies = props.movies.map((movie, index) => {
     return <MovieCard
       title = { movie.title }
@@ -25,8 +25,10 @@ export function MoviesList(props) {
 
   return (
     <div className="movie-card__list">
-      { movies.length ? props.children : null }
+      {/* { movies.length ? props.children : null } */}
       { movies.length ? movies : noMovies }
     </div>
   )
 };
+
+export default MoviesList;

@@ -20,9 +20,8 @@ class App extends React.Component {
           <Route path="/:type/:filmId" component={ FullMovieDescriptionContainer } />
         </Switch>
       </div>
-
-);
-}
+    );
+  }
 }
 
 export default App;

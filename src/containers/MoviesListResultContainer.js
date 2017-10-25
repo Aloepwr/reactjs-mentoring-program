@@ -5,7 +5,7 @@ import { SortBy } from '../actions/index';
 
 
 const mapStateToProps = (state) => {
-  const sortedMovies = state.movies.slice();
+    const sortedMovies = state.allMovies.slice();
 
   sortedMovies.sort((a,b) => {
     if (state.sortBy === SortBy.SORT_BY_RELEASE_DATE) {

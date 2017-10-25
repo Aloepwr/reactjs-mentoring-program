@@ -3,12 +3,9 @@
 //
 
 .movie-description {
-  width: 980px;
-  padding: 25px 40px 40px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 80px;
-  border-radius: 5px;
+  max-width: 1020px;
+  padding: 10px 40px 35px;
+  margin: 0 auto;
   
   background-color: rgba(0, 0, 0, 0.85);
 
@@ -25,17 +22,20 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   padding: 0 30px;
 
   .btn__back {
     width: 100px;
     height: 30px;
 
-    border: 0;
     border-radius: 2px;
     background-color: white;
+
+    line-height: 2em;
+    text-align: center;
     text-transform: uppercase;
+    text-decoration: none;
     font-size: 0.9em;
     font-weight: bold;
     letter-spacing: -0.2px;
@@ -51,11 +51,15 @@
 }
 
 .movie-description__image {
-  width: 37%;
+  width: auto;
+  
+  img {
+    width: 270px;
+  }
 }
 
 .movie-description__details {
-  width: 63%;
+  width: 65%;
   padding: 5px;
 }
 

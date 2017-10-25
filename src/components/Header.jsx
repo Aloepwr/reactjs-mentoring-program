@@ -18,7 +18,7 @@ export function Header(props) {
       className="btn">Movies</button>
   }
 
-  if(props.isTVShowActive) {
+  if (props.isTVShowActive) {
     searchByTVShows = <button type="button" className="btn btn-active">TV Shows</button>
   } else {
     searchByTVShows = <button type="button"
@@ -44,7 +44,7 @@ export function Header(props) {
               <li>{ searchByTVShows }</li>
             </ul>
             <label>
-              <input type="submit" value="Search" className="btn__search"/>
+              <input type="submit" value="search" className="btn__search"/>
             </label>
           </div>
         </form>

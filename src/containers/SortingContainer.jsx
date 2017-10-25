@@ -1,4 +1,3 @@
-import React from 'react'
 import { connect } from 'react-redux';
 
 import { setSortBy, SortBy } from '../actions/index';
@@ -28,22 +27,24 @@ let SortingContainer = (props) => {
   let sortByRating;
   
   if (props.isDateActive) {
-    sortByDate = <button type="button" className="linkActive">release date</button>;
+    sortByDate = <a className="link-active">release date</a>;
   } else {
-    sortByDate = <button type="button" onClick={ props.onDateClick }>release date</button>;
+    sortByDate = <a onClick={ props.onDateClick }>release date</a>;
   }
 
   if (props.isRatingActive) {
-    sortByRating = <button type="button" className="linkActive">rating</button>;
+    sortByRating = <a className="link-active">rating</a>;
   } else {
-    sortByRating = <button type="button" onClick={ props.onRatingClick }>rating</button>;
+    sortByRating = <a onClick={ props.onRatingClick }>rating</a>;
   }
 
   return (
-    <div className="search-filter">
-      <li><span>Sort by:</span></li>
-      <li>{ sortByDate }</li>
-      <li>{ sortByRating }</li>
+    <div className="search-filter__movies-sort">
+      <ul>
+        <li><span>Sort by:</span></li>
+        <li>{ sortByDate }</li>
+        <li>{ sortByRating }</li>
+      </ul>
     </div>
   )
 };
