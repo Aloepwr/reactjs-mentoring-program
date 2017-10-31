@@ -15,7 +15,7 @@ class App extends React.Component {
       <div className="app">
         <Switch>
           <Route exact path="/" component={ MoviesListResultContainer } />
-          <Route exact path="/search" component={ MoviesListResultContainer } />
+          <Route path="/search" component={ MoviesListResultContainer } />
           <Route path="/search/:searchQuery" component={ MoviesListResultContainer } />
           <Route path="/:type/:filmId" component={ FullMovieDescriptionContainer } />
         </Switch>

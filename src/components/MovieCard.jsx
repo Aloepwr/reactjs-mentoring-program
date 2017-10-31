@@ -3,6 +3,7 @@ import "../stylesheets/MovieCard";
 
 export function MovieCard(props) {
   const { poster, title, release_date, id, type } = props;
+
   return (
     <div className="movie-card">
       <div className="movie-card__layout">
@@ -16,7 +17,7 @@ export function MovieCard(props) {
             <h4>{ title }</h4>
           </div>
           <div className="movie-card__description--year">
-            { release_date ? <div>{ release_date }</div> : null }
+            <div>{ release_date }</div>
           </div>            
         </div>
       </div>

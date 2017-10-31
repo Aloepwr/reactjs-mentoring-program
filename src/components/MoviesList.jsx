@@ -25,7 +25,6 @@ function MoviesList(props) {
 
   return (
     <div className="movie-card__list">
-      {/* { movies.length ? props.children : null } */}
       { movies.length ? movies : noMovies }
     </div>
   )

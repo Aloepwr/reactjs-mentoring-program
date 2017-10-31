@@ -21,8 +21,8 @@ const mapDispatchToProps = (dispatch) => {
     onTVShowsClick: () => {
       dispatch(setSearchBy(SearchBy.SEARCH_BY_TVSHOW));
     },
-    onSubmitSearch: (values) => {
-      dispatch(fetchMovies(values.searchText));
+    onSubmitSearch: (value) => {
+      dispatch(fetchMovies(value.searchText));
     }
   }
 };
