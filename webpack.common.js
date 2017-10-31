@@ -41,7 +41,7 @@ module.exports = {
     new ExtractTextPlugin('styles.css'),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({
-      'React': 'react'
+      React: 'react'
     })
   ]
 };

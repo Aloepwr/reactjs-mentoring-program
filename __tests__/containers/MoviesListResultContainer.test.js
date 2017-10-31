@@ -1,9 +1,9 @@
 import { mapStateToProps } from "../../src/containers/MoviesListResultContainer";
 
 describe("List result container", () => {
-  it("sort movies by date", () => {
+  it("should sort movies by date", () => {
     const stateForSortingByDate = {
-      movies: [{
+      allMovies: [{
         release_date: "2017-09-30",
         vote_average: 8.8
       },
@@ -36,9 +36,9 @@ describe("List result container", () => {
     expect(mapStateToProps(stateForSortingByDate)).toEqual(sortedMovies)
   });
 
-  it("sort movies by rating", () => {
+  it("should sort movies by rating", () => {
     const stateforSortingByRating = {
-      movies: [{
+      allMovies: [{
         release_date: "2017-09-30",
         vote_average: 8.8
       },

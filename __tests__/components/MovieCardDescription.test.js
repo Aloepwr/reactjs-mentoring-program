@@ -1,4 +1,6 @@
-import ReactTestRenderer from "react-test-renderer";
+import React from 'react';
+import renderer from "react-test-renderer";
+import { MemoryRouter } from 'react-router-dom';
 import MovieCardDescription from "../../src/components/MovieCardDescription";
 
 const movie = {
@@ -17,8 +19,10 @@ const movie = {
 
 describe("Movie card description component", () => {
   test("renders valid layout when it receives all props", () => {
-    const tree = ReactTestRenderer.create(
-      <MovieCardDescription currentMovie={ movie }/>
+    const tree = renderer.create(
+      <MemoryRouter>
+        <MovieCardDescription currentMovie={ movie }/>
+      </MemoryRouter>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -32,8 +36,10 @@ describe("Movie card description component", () => {
   };
 
   test("renders layout without vote_average, release_date, runtime, budget, seasons, last_air_date ", () => {
-    const tree = ReactTestRenderer.create(
-      <MovieCardDescription currentMovie={ movieWithoutSomeProps }/>
+    const tree = renderer.create(
+      <MemoryRouter>
+        <MovieCardDescription currentMovie={ movieWithoutSomeProps }/>
+      </MemoryRouter>
     ).toJSON();
     expect(tree).toMatchSnapshot();
   });

@@ -1,3 +1,4 @@
+import React from 'react';
 import { shallow, configure } from "enzyme";
 import { FullMovieDescription } from "../../src/components/FullMovieDescription";
 import Adapter from 'enzyme-adapter-react-16';
@@ -61,12 +62,4 @@ describe("FullMovieDescription component", () => {
       expect(loadMovieInfo.mock.calls).toEqual([[111, "movie"], [333, "movie"]]);
     });
   });
-
-  describe("'Films by' movie list bar", () => {
-    it("renders gray strip with director name", () => {
-      const wrapper = shallow(<FullMovieDescription currentMovie={{director: "some director"}} {...props} />);
-      expect(wrapper.contains("Films by some director")).toBe(true);
-    });
-  });
-
 });

@@ -1,3 +1,4 @@
+import React from 'react';
 import { shallow, configure } from "enzyme";
 import MoviesList from "../../src/components/MoviesList";
 import Adapter from 'enzyme-adapter-react-16';

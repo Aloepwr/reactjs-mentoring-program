@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { setSortBy, SortBy } from '../actions/index';
-import '../stylesheets/HeaderFilter';
+import '../stylesheets/HeaderFilter.less';
 
 
 const mapStateToProps = (state) => {

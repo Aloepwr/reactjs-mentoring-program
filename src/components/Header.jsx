@@ -1,15 +1,15 @@
-// import { withRouter } from "react-router";
+import React from 'react';
 import { Field } from 'redux-form';
 import { Link } from 'react-router-dom';
 
-import "../stylesheets/Header";
-import "../stylesheets/styles";
+import "../stylesheets/Header.less";
+import "../stylesheets/styles.less";
 
 
 export function Header(props) {
   let searchByMovies;
   let searchByTVShows;
-
+  
   if (props.isMoviesActive) {
     searchByMovies = <button type="button" className="btn btn-active">Movies</button>
   } else {
@@ -18,7 +18,7 @@ export function Header(props) {
       onClick = { props.onMoviesClick }
       className="btn">Movies</button>
   }
-
+  
   if (props.isTVShowActive) {
     searchByTVShows = <button type="button" className="btn btn-active">TV Shows</button>
   } else {
@@ -26,7 +26,7 @@ export function Header(props) {
       onClick = { props.onTVShowsClick }
       className="btn">TV Shows</button>
   }
-
+  
   return (
     <header>
       <div className="header">
@@ -55,12 +55,13 @@ export function Header(props) {
 };
 
 
+// import { withRouter } from "react-router";
 
 // let searchQuery = "";
 
 // const Header = withRouter( ({history}) => (
-//   <header>
-//     <div className="header">
+  //   <header>
+  //     <div className="header">
 //       <span className="span-title">netflixroulette</span>
 //       <section className="header__search-field">
 //         <h2>Find your movie</h2>

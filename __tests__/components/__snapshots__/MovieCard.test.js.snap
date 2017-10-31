@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie card component renders valid layout when it receives all props 1`] = `
+<div
+  className="movie-card"
+>
+  <div
+    className="movie-card__layout"
+  >
+    <div
+      className="movie-card__image"
+    >
+      <a
+        href="/movie/111"
+        onClick={[Function]}
+      >
+        <img
+          src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wajNlrVDkryVGTzDz9vZE6XKZnC.jpg"
+        />
+      </a>
+    </div>
+    <div
+      className="movie-card__description"
+    >
+      <div
+        className="movie-card__description--title"
+      >
+        <h4>
+          test title
+        </h4>
+      </div>
+      <div
+        className="movie-card__description--year"
+      >
+        <div>
+          1906-08-24
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Movie card component renders valid layout without release_date 1`] = `
+<div
+  className="movie-card"
+>
+  <div
+    className="movie-card__layout"
+  >
+    <div
+      className="movie-card__image"
+    >
+      <a
+        href="/movie/111"
+        onClick={[Function]}
+      >
+        <img
+          src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wajNlrVDkryVGTzDz9vZE6XKZnC.jpg"
+        />
+      </a>
+    </div>
+    <div
+      className="movie-card__description"
+    >
+      <div
+        className="movie-card__description--title"
+      >
+        <h4>
+          test title
+        </h4>
+      </div>
+      <div
+        className="movie-card__description--year"
+      >
+        <div />
+      </div>
+    </div>
+  </div>
+</div>
+`;

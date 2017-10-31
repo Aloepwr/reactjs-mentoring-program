@@ -1,5 +1,6 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import "../stylesheets/MovieCardDescription";
+import "../stylesheets/MovieCardDescription.less";
 
 
 const MovieCardDescription = (props) => {

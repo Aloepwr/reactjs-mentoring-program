@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie card description component renders layout without vote_average, release_date, runtime, budget, seasons, last_air_date  1`] = `
+<div
+  className="movie-description"
+>
+  <div
+    className="movie-description__head"
+  >
+    <span
+      className="span-title"
+    >
+      netflixroulette
+    </span>
+    <a
+      className="btn__back"
+      href="/search"
+      onClick={[Function]}
+    >
+      Search
+    </a>
+  </div>
+  <div
+    className="movie-description__layout"
+  >
+    <div
+      className="movie-description__image"
+    >
+      <img
+        src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wajNlrVDkryVGTzDz9vZE6XKZnC.jpg"
+      />
+    </div>
+    <div
+      className="movie-description__details"
+    >
+      <div
+        className="movie-description__details--title"
+      >
+        <h2>
+          test title
+        </h2>
+      </div>
+      <div
+        className="movie-description__info"
+      />
+      <p
+        className="movie-description__summary"
+      >
+        Some overview
+      </p>
+      <div
+        className="movie-description__bottom-info"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Movie card description component renders valid layout when it receives all props 1`] = `
+<div
+  className="movie-description"
+>
+  <div
+    className="movie-description__head"
+  >
+    <span
+      className="span-title"
+    >
+      netflixroulette
+    </span>
+    <a
+      className="btn__back"
+      href="/search"
+      onClick={[Function]}
+    >
+      Search
+    </a>
+  </div>
+  <div
+    className="movie-description__layout"
+  >
+    <div
+      className="movie-description__image"
+    >
+      <img
+        src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wajNlrVDkryVGTzDz9vZE6XKZnC.jpg"
+      />
+    </div>
+    <div
+      className="movie-description__details"
+    >
+      <div
+        className="movie-description__details--title"
+      >
+        <h2>
+          test title
+        </h2>
+        <p>
+          4.1
+        </p>
+      </div>
+      <div
+        className="movie-description__info"
+      >
+        <p>
+          1906-08-24
+        </p>
+        <p>
+          150
+           min
+        </p>
+      </div>
+      <p
+        className="movie-description__summary"
+      >
+        Some overview
+      </p>
+      <div
+        className="movie-description__bottom-info"
+      >
+        <p>
+          Budget is 
+          10000
+          $
+        </p>
+        <p>
+          Seasons: 
+          1
+        </p>
+        <p>
+          Last air date: 
+          2074-11-27
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;

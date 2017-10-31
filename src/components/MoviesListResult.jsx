@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import React from 'react';
 
 import HeaderContainer from '../containers/HeaderContainer';
 import SortingContainer from '../containers/SortingContainer';
@@ -6,9 +7,9 @@ import MoviesList from './MoviesList';
 import HeaderFilter from './HeaderFilter';
 import Footer from './Footer';
 
-import '../stylesheets/Header';
-import '../stylesheets/Footer';
-import '../stylesheets/styles';
+import '../stylesheets/Header.less';
+import '../stylesheets/Footer.less';
+import '../stylesheets/styles.less';
 
 
 export function MoviesListResult(props) {

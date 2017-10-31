@@ -1,4 +1,5 @@
-import "../stylesheets/HeaderFilter";
+import React from 'react';
+import "../stylesheets/HeaderFilter.less";
 
 
 const HeaderFilter = (props) => (

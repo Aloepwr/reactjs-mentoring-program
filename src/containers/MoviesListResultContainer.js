@@ -26,5 +26,4 @@ const MoviesListResultContainer = connect(
 )(MoviesListResult);
 
 export {mapStateToProps};
-
 export default MoviesListResultContainer;

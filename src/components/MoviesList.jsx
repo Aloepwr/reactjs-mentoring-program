@@ -1,4 +1,5 @@
-import "../stylesheets/MovieCard";
+import React from 'react';
+import "../stylesheets/MovieCard.less";
 import { MovieCard } from './MovieCard';
 
 

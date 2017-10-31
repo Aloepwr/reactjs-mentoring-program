@@ -1,4 +1,4 @@
-import "../stylesheets/Footer";
+import "../stylesheets/Footer.less";
 
 
 const Footer = () => (

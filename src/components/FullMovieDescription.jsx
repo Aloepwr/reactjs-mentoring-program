@@ -6,9 +6,9 @@ import MoviesList from './MoviesList';
 import MovieCardDescription from './MovieCardDescription';
 import Footer from './Footer';
 
-import '../stylesheets/MovieCardDescription';
-import '../stylesheets/Footer';
-import '../stylesheets/styles';
+import '../stylesheets/MovieCardDescription.less';
+import '../stylesheets/Footer.less';
+import '../stylesheets/styles.less';
 
 
 export class FullMovieDescription extends React.Component {
