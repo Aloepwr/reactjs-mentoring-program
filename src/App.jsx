@@ -1,9 +1,8 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch } from "react-router-dom";
+import { renderRoutes } from 'react-router-config';
 
-import MoviesListResultContainer from './containers/MoviesListResultContainer';
-import FullMovieDescriptionContainer from './containers/FullMovieDescriptionContainer';
-
+import routes from './routes';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,10 +13,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <Switch>
-          <Route exact path="/" component={ MoviesListResultContainer } />
-          <Route path="/search" component={ MoviesListResultContainer } />
-          <Route path="/search/:searchQuery" component={ MoviesListResultContainer } />
-          <Route path="/:type/:filmId" component={ FullMovieDescriptionContainer } />
+          {renderRoutes(routes)}
         </Switch>
       </div>
     );
@@ -25,6 +21,21 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+
+
+// import MoviesListResultContainer from './containers/MoviesListResultContainer';
+// import FullMovieDescriptionContainer from './containers/FullMovieDescriptionContainer';
+
+// <Route exact path="/" component={ MoviesListResultContainer } />
+// <Route path="/search" component={ MoviesListResultContainer } />
+// <Route path="/search/:searchQuery" component={ MoviesListResultContainer } />
+// <Route path="/:type/:filmId" component={ FullMovieDescriptionContainer } />
+
+
+
+// The oldest version
 
 // import Header from "./components/Header";
 // import Footer from "./components/Footer";

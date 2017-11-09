@@ -1,12 +1,13 @@
 import React from 'react';
 import { Field } from 'redux-form';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 import "../stylesheets/Header.less";
 import "../stylesheets/styles.less";
 
 
-export function Header(props) {
+export const Header = withRouter( (props) => {
   let searchByMovies;
   let searchByTVShows;
   
@@ -35,7 +36,7 @@ export function Header(props) {
         <form onSubmit = { props.handleSubmit(props.onSubmitSearch) }>
           <div className="header__search-field">
             <label>
-              <Field type="search" component="input" name="searchText" />
+              <Field type="search" component="input" name="searchText" placeholder="What would you like to watch?" />
             </label>
           </div>
           <div className="header__search-sort">
@@ -52,7 +53,7 @@ export function Header(props) {
       </div>
     </header>
   )
-};
+});
 
 
 // import { withRouter } from "react-router";

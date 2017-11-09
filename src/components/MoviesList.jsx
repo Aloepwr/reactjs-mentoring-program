@@ -10,7 +10,7 @@ function getYear(dateString) {
   }
 }
 
-function MoviesList(props) {
+const MoviesList = (props) => {
   const movies = props.movies.map((movie, index) => {
     return <MovieCard
       title = { movie.title }

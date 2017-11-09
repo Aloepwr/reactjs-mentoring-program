@@ -12,7 +12,7 @@ import '../stylesheets/Footer.less';
 import '../stylesheets/styles.less';
 
 
-export function MoviesListResult(props) {
+export const MoviesListResult = (props) => {
   const resultQuentity = props.movies.length;
   const results = resultQuentity == 1 ? "result" : "results";
   const movieListBar = <div className="search-filter__movies-amount">

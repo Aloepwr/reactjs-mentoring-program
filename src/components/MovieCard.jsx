@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "../stylesheets/MovieCard.less";
 
-export function MovieCard(props) {
+export const MovieCard = (props) => {
   const { poster, title, release_date, id, type } = props;
 
   return (

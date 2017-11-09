@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
+import { withRouter } from 'react-router';
 
 import { setSearchBy, SearchBy } from '../actions/index';
 import { fetchMovies } from '../thunks/index';
@@ -27,10 +28,10 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-let HeaderContainer = connect(
+let HeaderContainer = withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Header);
+)(Header));
 
 HeaderContainer = reduxForm({
   form: 'search',

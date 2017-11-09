@@ -1,4 +1,6 @@
 import { apiKey, SearchBy, receiveMovies, receiveRelatedMovies, receiveCurrentMovie } from '../actions/index';
+import fetch from 'isomorphic-fetch';
+
 
 // Functionality
 

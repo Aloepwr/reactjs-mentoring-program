@@ -1,20 +1,17 @@
-import { render } from "react-dom";
+import { hydrate } from "react-dom";
 import { BrowserRouter as Router} from "react-router-dom";
-import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
-import thunk from "redux-thunk";
 
 import App from "./App";
-import reducers from "./reducers/reducers";
-import "./stylesheets/styles";
+import configureStore from './store/configureStore';
+import "./stylesheets/styles.less";
 
-const store = createStore(
-  reducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddleware(thunk)
-);
 
-render(
+const store = configureStore(window.PRELOADED_STATE);
+delete window.PRELOADED_STATE;
+
+
+hydrate(
   (
     <Provider store={ store }>
       <Router>

@@ -6,6 +6,17 @@
   "env": {
     "test": {
       "presets": [["es2015"], "react"]
+    },
+    "node": {
+      "plugins": [
+        [
+          "babel-plugin-transform-require-ignore",
+          {
+            "extensions": [".less"]
+          }
+        ]
+      ],
+      "presets": ["es2015"]
     }
   }
 }

@@ -14,12 +14,16 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     loadMovieInfo: (id, type) => {
-      if (type == "movie") {
-        dispatch(fetchMovieInfo(id, type));
-      } else {
-        dispatch(fetchTVShowInfo(id, type));
-      }
+      return dispatch(fetchInfo(id, type))
     }
+  }
+};
+
+export function fetchInfo(id, type) {
+  if (type == "movie") {
+    return fetchMovieInfo(id, type);
+  } else {
+    return fetchTVShowInfo(id, type);
   }
 };
 

@@ -5,6 +5,7 @@ import HeaderFilter from './HeaderFilter';
 import MoviesList from './MoviesList';
 import MovieCardDescription from './MovieCardDescription';
 import Footer from './Footer';
+import { fetchInfo } from '../containers/FullMovieDescriptionContainer';
 
 import '../stylesheets/MovieCardDescription.less';
 import '../stylesheets/Footer.less';
@@ -12,8 +13,14 @@ import '../stylesheets/styles.less';
 
 
 export class FullMovieDescription extends React.Component {
-  componentWillMount() {
-    this.props.loadMovieInfo(this.props.match.params.filmId, this.props.match.params.type);
+  static fetchData(store, match) {
+    return store.dispatch(fetchInfo(match.params.filmId, match.params.type));
+  }
+
+  componentDidMount() {
+    if (this.props.currentMovie.id != this.props.match.params.filmId) {
+      this.props.loadMovieInfo(this.props.match.params.filmId, this.props.match.params.type);
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -30,7 +37,7 @@ export class FullMovieDescription extends React.Component {
     return (
       <div>
         <header>
-        <MovieCardDescription currentMovie={ this.props.currentMovie } />
+          <MovieCardDescription currentMovie={ this.props.currentMovie } />
         </header>
         <main>
           <HeaderFilter>
