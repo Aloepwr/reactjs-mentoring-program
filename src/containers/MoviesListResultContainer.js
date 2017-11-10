@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
+import { reduxForm, change } from 'redux-form';
 
 import { MoviesListResult } from '../components/MoviesListResult';
+import { fetchMovies } from '../thunks/index';
 import { SortBy } from '../actions/index';
 
 
@@ -21,8 +23,20 @@ const mapStateToProps = (state) => {
   };
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onSubmitSearch: (searchQuery) => {
+      dispatch(fetchMovies(searchQuery));
+    },
+    updateSearchValue: (value) => {
+      dispatch(change('search', 'searchText', value));
+    }
+  }
+};
+
 const MoviesListResultContainer = connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(MoviesListResult);
 
 export { mapStateToProps };

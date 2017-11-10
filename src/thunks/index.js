@@ -56,17 +56,17 @@ export function fetchMovies(query) {
     let state = getState();
 
     let urlType = "";
-    let urlParams = new URLSearchParams();
+    // let urlParams = new URLSearchParams();
 
-    urlParams.append("query", decodeURIComponent(query));
+    // urlParams.append("query", decodeURIComponent(query));
 
-    if(state.searchBy === SearchBy.SEARCH_BY_MOVIES) {
+    if (state.searchBy === SearchBy.SEARCH_BY_MOVIES) {
       urlType = "movie"
     } else {
       urlType = "tv"
     }
 
-    return fetch(`https://api.themoviedb.org/3/search/${urlType}?api_key=${apiKey}&${urlParams}`)
+    return fetch(`https://api.themoviedb.org/3/search/${urlType}?api_key=${apiKey}&query=${query}`)
       .then(isResponseOk)
       .then(fetchedMovies => {
         let converter = state.searchBy === SearchBy.SEARCH_BY_MOVIES ? convertToMovie : convertToTVShow;

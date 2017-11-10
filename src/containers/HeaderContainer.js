@@ -28,10 +28,10 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-let HeaderContainer = withRouter(connect(
+let HeaderContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(Header));
+)(Header);
 
 HeaderContainer = reduxForm({
   form: 'search',

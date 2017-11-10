@@ -1,26 +1,24 @@
-import React from "react";
-import { Switch } from "react-router-dom";
-import { renderRoutes } from 'react-router-config';
+// import React from "react";
+// import { Switch } from "react-router-dom";
+// import { renderRoutes } from 'react-router-config';
 
-import routes from './routes';
+// import routes from './routes';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+// class App extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
   
-  render() {
-    return (
-      <div className="app">
-        <Switch>
-          {renderRoutes(routes)}
-        </Switch>
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div className="app">
+//         {renderRoutes(routes)}
+//       </div>
+//     );
+//   }
+// }
 
-export default App;
+// export default App;
 
 
 

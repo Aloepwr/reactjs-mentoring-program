@@ -1,8 +1,9 @@
 import { hydrate } from "react-dom";
-import { BrowserRouter as Router} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
+import { renderRoutes } from 'react-router-config';
 
-import App from "./App";
+import routes from './routes';
 import configureStore from './store/configureStore';
 import "./stylesheets/styles.less";
 
@@ -14,9 +15,9 @@ delete window.PRELOADED_STATE;
 hydrate(
   (
     <Provider store={ store }>
-      <Router>
-        <App />
-      </Router>
+      <BrowserRouter>
+        { renderRoutes(routes) }
+      </BrowserRouter>
     </Provider>
   ),   
   document.getElementById("react-container")

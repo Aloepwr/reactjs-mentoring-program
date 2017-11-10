@@ -7,7 +7,7 @@ import "../stylesheets/Header.less";
 import "../stylesheets/styles.less";
 
 
-export const Header = withRouter( (props) => {
+export const Header = (props) => {
   let searchByMovies;
   let searchByTVShows;
   
@@ -53,7 +53,7 @@ export const Header = withRouter( (props) => {
       </div>
     </header>
   )
-});
+};
 
 
 // import { withRouter } from "react-router";

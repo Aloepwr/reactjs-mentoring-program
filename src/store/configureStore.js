@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import reduxPromiseMiddleware from 'redux-promise'
+import reduxPromiseMiddleware from 'redux-promise';
 import thunk from 'redux-thunk';
 
 import reducers from '../reducers/reducers';
