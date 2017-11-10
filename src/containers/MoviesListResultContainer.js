@@ -27,9 +27,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     onSubmitSearch: (searchQuery) => {
       dispatch(fetchMovies(searchQuery));
-    },
-    updateSearchValue: (value) => {
-      dispatch(change('search', 'searchText', value));
     }
   }
 };

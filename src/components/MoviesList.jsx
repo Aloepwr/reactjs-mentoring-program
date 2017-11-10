@@ -26,7 +26,7 @@ const MoviesList = (props) => {
 
   return (
     <div className="movie-card__list">
-      { movies.length ? movies : noMovies }
+      { movies.length >= 1 ? movies : noMovies }
     </div>
   )
 };

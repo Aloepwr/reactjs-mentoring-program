@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import { reducer as formReducer } from 'redux-form';
 
 import allMovies from './allMovies';
 import currentMovie from './currentMovie';
@@ -12,8 +11,7 @@ const reducers = combineReducers({
   currentMovie,
   relatedMovies,
   searchBy,
-  sortBy,
-  form: formReducer
+  sortBy
 });
 
 export default reducers;

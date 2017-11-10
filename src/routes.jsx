@@ -20,9 +20,6 @@ const routes = [
         exact: true,
         component: MoviesListResultContainer
       },
-      { path: '/search',
-        component: MoviesListResultContainer
-      },
       { path: '/search/:searchQuery',
         component: MoviesListResultContainer
       },

@@ -1,9 +1,7 @@
 import { connect } from 'react-redux';
-import { reduxForm } from 'redux-form';
 import { withRouter } from 'react-router';
 
 import { setSearchBy, SearchBy } from '../actions/index';
-import { fetchMovies } from '../thunks/index';
 import { Header } from '../components/Header';
 
 
@@ -21,21 +19,13 @@ const mapDispatchToProps = (dispatch) => {
     },
     onTVShowsClick: () => {
       dispatch(setSearchBy(SearchBy.SEARCH_BY_TVSHOW));
-    },
-    onSubmitSearch: (value) => {
-      dispatch(fetchMovies(value.searchText));
     }
   }
 };
 
-let HeaderContainer = connect(
+let HeaderContainer = withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Header);
-
-HeaderContainer = reduxForm({
-  form: 'search',
-  destroyOnUnmount: false
-})(HeaderContainer);
+)(Header));
 
 export default HeaderContainer;

@@ -5,7 +5,6 @@ import { matchRoutes, renderRoutes } from 'react-router-config';
 import { Provider } from "react-redux";
 
 import routes from '../src/routes';
-import App from '../src/App';
 import configureStore from '../src/store/configureStore';
 
 
@@ -13,15 +12,17 @@ const renderFullPage = (html, preloadedState) => {
   return `
     <html>
       <head>
-        <title>Netflix roulette</title>
+        <title>SSR</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/dist/styles.css">
       </head>
       <body>
         <div id="react-container">${html}</div>
         <script>
           window.PRELOADED_STATE = ${JSON.stringify(preloadedState).replace( /</g, '\\u003c' )}
         </script>
+        <script type="text/javascript" src="/dist/bundle.js"></script>
       </body>
     </html>
   `;

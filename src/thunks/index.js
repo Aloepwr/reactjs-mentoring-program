@@ -56,9 +56,6 @@ export function fetchMovies(query) {
     let state = getState();
 
     let urlType = "";
-    // let urlParams = new URLSearchParams();
-
-    // urlParams.append("query", decodeURIComponent(query));
 
     if (state.searchBy === SearchBy.SEARCH_BY_MOVIES) {
       urlType = "movie"
